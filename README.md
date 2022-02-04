@@ -1,5 +1,5 @@
 # Project# CYM Books  - Final Project
-### by: 
+### by: Jacob Taylor, Can Phan, Malachi Chapman, and Justin Stokes
 _
 
 ## Final Project
@@ -30,7 +30,7 @@ _
 # Links to Site
 
 
-- [CYM Books Repository]()
+- [ Repository](https://github.com/mchapm17/final-project)
 - [Deployed Heroku Site]()
 
 
@@ -39,8 +39,11 @@ _
  Malachi Chapman
  - [Github](https://github.com/mchapm17)
 
- Can Pham
+ Can Phan
  - [Github](https://github.com/CanTPhan)
 
+ Jacob Taylor
+ - [Github](https://github.com/jacobotaylor)  
 
-- [Github]()
+ Justin Stokes
+ - [Github]()
