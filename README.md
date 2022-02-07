@@ -1,8 +1,8 @@
-# Project# CYM Books  - Final Project
+# Project#  - Cyber Notes
 ### by: Jacob Taylor, Can Phan, Malachi Chapman, and Justin Stokes
 _
 
-## Final Project
+## Cyber Notes
 
 _
 
