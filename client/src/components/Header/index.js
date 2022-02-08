@@ -5,6 +5,7 @@ import Navbar from '../Navbar';
 const Header = () => {
   return (
     <header>
+      <h1>Cyber Notes</h1>
       <div>
         <Link to="/">
           <h1>User List</h1>
