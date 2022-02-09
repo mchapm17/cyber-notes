@@ -19,6 +19,6 @@ const noteSchema = new Schema(
   }
 );
 
-const User = model('Note', noteSchema);
+const Note = model('Note', noteSchema);
 
 module.exports = Note;
