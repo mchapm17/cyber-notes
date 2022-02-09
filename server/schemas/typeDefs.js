@@ -13,6 +13,13 @@ const typeDefs = gql`
     user: User
   }
 
+  type Note {
+    _id: ID
+    name: String
+    date: String
+    noteData: String
+  }
+
   type Query {
     users: [User]
     user(id: ID!): User
