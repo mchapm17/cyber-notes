@@ -1,6 +1,6 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User } = require('../models');
-
+const { User, Note } = require('../models');
+const {signToken } = require('../utils/auth')
 const resolvers = {
   Query: {
     users: async () => {
@@ -14,6 +14,12 @@ const resolvers = {
         return User.findOne({ _id: context.user._id });
       }
       throw new AuthenticationError('You need to be logged in!');
+    },
+    note: async (_, id) => {
+      return Note.findOne({ _id: args.id});
+    },
+    notes: async () => {
+      return note.find();
     },
   },
 
@@ -39,8 +45,26 @@ const resolvers = {
       const token = signToken(user);
 
       return { token, user };
+    },
+    addNote: async (_, {name, noteData}) => {
+      const note = await Note.create(name);
+
+      if (!note) {
+        throw new AuthenticationError('Input Required')
+      }
+
+      const token = signToken(note);
+    },
+    updateNote: async (_, {id}) => {
+      return await Note.findOneAndUpdate(
+        {_id: id },
+        { new: true }
+        );
+    },
+    deleteNote: async (_, {id}) => {
+      const note = await Note.findOne({id});
+    },
     }
-  }
 };
 
 module.exports = resolvers;

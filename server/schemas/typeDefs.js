@@ -13,15 +13,28 @@ const typeDefs = gql`
     user: User
   }
 
+  type Note {
+    _id: ID
+    name: String
+    date: String
+    noteData: String
+    userId: User
+  }
+
   type Query {
     users: [User]
     user(id: ID!): User
     me: User
+    note(id: ID!): Note
+    notes(id: ID!): [Note] 
   }
 
   type Mutation {
     addUser(email:String!, username:String!, password:String!): Auth
     login(email:String!, password:String!): Auth
+    addNote(name:String!, noteData:String!): Note
+    updateNote(id:ID!): Note
+    deleteNote(id:ID!): Note
   }
 `;
 
