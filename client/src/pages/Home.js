@@ -14,8 +14,8 @@ const Home = () => {
   const renderUserList = () => {
     if (loading) {
       return <h2>Loading...</h2>
-    } else {
-      return <UserList users={users} title="List of Users" />
+    } else {    <h1>words</h1>
+      return <UserList users={users} title="List of Users" />     
     }
   } 
 
@@ -26,6 +26,7 @@ const Home = () => {
 
   return (
     <main>
+      <h1>words</h1>
       <div>
         {renderUsername()}
       </div>
