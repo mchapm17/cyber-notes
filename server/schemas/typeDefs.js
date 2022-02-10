@@ -26,7 +26,7 @@ const typeDefs = gql`
     user(id: ID!): User
     me: User
     note(id: ID!): Note
-    notes(id: ID!): [Note] 
+    notes: [Note] 
   }
 
   type Mutation {
