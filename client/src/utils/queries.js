@@ -32,7 +32,7 @@ export const QUERY_ME = gql`
 
 export const QUERY_NOTE = gql`
   query note($id: ID!) {
-    note (id: $id!) {
+    note (id: $id) {
       _id
       username
       email
