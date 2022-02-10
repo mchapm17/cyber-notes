@@ -54,3 +54,40 @@ export const ADD_COMMENT = gql`
     }
   }
 `;
+
+
+export const ADD_NOTE = gql`
+  mutation addNote($name: String!, $noteData: String!) {
+    addNote(name: $name, noteData: $noteData) {
+      note {
+        _id
+        name
+        noteData
+      }
+    }
+  }
+`;
+
+export const UPDATE_NOTE = gql`
+  mutation updateNote($name: String!, $noteData: String!) {
+    updateNote(name: $name, noteData: $noteData) {
+      note {
+        _id
+        name
+        noteData
+      }
+    }
+  }
+`;
+
+export const DELETE_NOTE = gql`
+  mutation deleteNote($name: String!, $noteData: String!) {
+    deleteNote(name: $name, noteData: $noteData) {
+      note {
+        _id
+        name
+        noteData
+      }
+    }
+  }
+`;
