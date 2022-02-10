@@ -12,9 +12,16 @@ function Navbar() {
   if (Auth.loggedIn()) {
     return (
       <>
-        <Link to="/me">
-          {Auth.getProfile().data.username}'s profile
+           <div>
+        <Link to="/">
+          <h1>Your Notes</h1>
         </Link>
+           </div>
+           <div>
+        <link to="../../pages/Profile">
+        
+        </link>
+           </div>
         <button onClick={logout}>
           Logout
         </button>
