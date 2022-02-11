@@ -14,10 +14,12 @@ const Home = () => {
   const renderUserList = () => {
     if (loading) {
       return <h2>Loading...</h2>
-    } else {    <h1>words</h1>
+    } else {    <h1>Current profile</h1>
       return <UserList users={users} title="List of Users" />     
     }
   } 
+
+  // 
 
   const renderUsername = () => {
     if (!Auth.loggedIn()) return null;

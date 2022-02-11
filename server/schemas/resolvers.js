@@ -18,8 +18,8 @@ const resolvers = {
     note: async (_, id) => {
       return await Note.findOne({ _id: args.id});
     },
-    notes: async () => {
-      return await Note.find();
+    notes: async (_, args, context) => {
+      return await Note.find({_id: context.user._id}).populate('userId');
     },
   },
 
@@ -46,8 +46,8 @@ const resolvers = {
 
       return { token, user };
     },
-    addNote: async (_, {name, noteData}) => {
-      const note = await Note.create({name, noteData});
+    addNote: async (_, {name, noteData}, context) => {
+      const note = await Note.create({name, noteData, userId:context.user._id});
       return note;
     },
     updateNote: async (_, {id}) => {
